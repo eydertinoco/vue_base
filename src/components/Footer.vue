@@ -1,0 +1,141 @@
+<template>
+  <div align="center" class="footer">
+    <div class="footer__info">
+      <p class="footer__text footer__text__t1">Footer de Eyder</p>
+      <p class="footer__text footer__text__t2">Nome da rua, Numero da rua - Bairro Cidade - Estado. CEP</p>
+      <div class="footer__redeSocial">
+        <a href=""
+           target="blank" class="footer__redeSocial__link">
+          <img src="/img/social/face_wb.png" alt="Facebook" class="redeSocial footer__redeSocial__icon"/>
+        </a>
+        <a href=""
+           target="blank" class="footer__redeSocial__link">
+          <img src="/img/social/inst_bw.png" alt="Instagram" class="redeSocial footer__redeSocial__icon"/>
+        </a>
+        <a href=""
+           target="blank" class="footer__redeSocial__link">
+          <img src="/img/social/twit_bw.png" alt="Twitter" class="redeSocial footer__redeSocial__icon"/>
+        </a>
+        <a href=""
+           target="blank" class="footer__redeSocial__link">
+          <img src="/img/social/what_bw.png" alt="Whatsapp" class="redeSocial footer__redeSocial__icon"/>
+        </a>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: "Footer"
+}
+</script>
+
+<style scoped lang="scss">
+@import './../assets/style/mixins';
+
+.footer {
+  background-color: #004a77;
+  bottom: 0px;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 8px;
+  width: 100%;
+  @include for-phone-only() {
+    height: 140px;
+  }
+  @include for-tablet-only() {
+    height: 100px;
+  }
+  @include for-desktop-only() {
+    height: 90px;
+  }
+  &__info {
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    @include for-phone-only() {
+      height: 140px;
+    }
+    @include for-tablet-only() {
+      height: 100px;
+    }
+  }
+  &__text {
+    color: $branco;
+    font-size: 12px !important;
+    font-family: "Montserrat",Helvetica,Arial,sans-serif !important;
+    margin: 5px 0;
+    @include for-phone-only() {
+      position: absolute;
+    }
+    @include for-tablet-only() {
+      position: absolute;
+    }
+    @include for-desktop-only() {
+      height: 20px;
+      position: relative;
+    }
+    &__t1 {
+      font-weight: bold;
+      @include for-phone-only() {
+        right: calc(50% - 80px);
+        top: 10px;
+      }
+      @include for-tablet-only() {
+        right: calc(50% + 120px);
+        top: 10px;
+      }
+    }
+    &__t2 {
+      @include for-phone-only() {
+        left: calc(50% - 185px);
+        top: 40px;
+      }
+      @include for-tablet-only() {
+        left: calc(50% - 100px);
+        top: 10px;
+      }
+    }
+  }
+  &__redeSocial {
+    @include for-phone-only() {
+      top: 100px;
+      position: relative;
+    }
+    @include for-tablet-only() {
+      top: 60px;
+      position: relative;
+    }
+    @include for-desktop-only() {
+      bottom: 0px;
+      position: absolute;
+    }
+    &__link {
+      text-decoration: none;
+    }
+    &__icon {
+      @include for-phone-only() {
+        margin: 0 4px;
+        visibility: visible;
+      }
+      @include for-tablet-only() {
+        margin: 0 4px;
+        visibility: visible;
+      }
+      @include for-desktop-only() {
+        bottom: 0px;
+        position: absolute;
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+.redeSocial {
+  margin-top: 12px!important;
+  width: 24px;
+}
+</style>
