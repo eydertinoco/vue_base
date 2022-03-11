@@ -1,0 +1,50 @@
+<template>
+  <div>
+    <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
+    <p v-else>Não estou trabalhando no momento.</p>
+    <p>Utilizo as seguintes tecnologias:</p>
+    <ul>
+      <li>JavaScript</li>
+      <li>PHP</li>
+      <li>Python</li>
+    </ul>
+    <div>
+      <button @click="showEmail">{{ textobotao }}</button>
+    </div>
+    <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
+    <p>Para acessar meu portfólio <a v-bind:href="meu_link" target="_blank">Basta clicar aqui</a></p>
+    <Picture/>
+  </div>
+</template>
+
+<script>
+  import Picture from "@/components/Picture";
+  export default {
+    // eslint-disable-next-line vue/multi-word-component-names
+    name: "Info",
+    components: {Picture},
+    data() {
+      return {
+        esta_trabalhando: true,
+        email: 'eydertinoco@outlook.com',
+        mostrar_email: false,
+        textobotao: 'Mostrar Email',
+        meu_link: 'https://www.google.com.br/'
+      }
+    },
+    methods: {
+      showEmail() {
+        this.mostrar_email = !this.mostrar_email;
+        if (!this.mostrar_email) {
+          this.textobotao = 'Mostrar Email'
+        } else {
+          this.textobotao = 'Esconder email.'
+        }
+      }
+    }
+  }
+</script>
+
+<style scoped>
+
+</style>

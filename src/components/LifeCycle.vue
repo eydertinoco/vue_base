@@ -1,24 +1,18 @@
 <template>
-<h1>Meu nome é: {{ nome }}</h1>
+  <Pessoa/>
+  <info/>
 </template>
 
 <script>
+import Pessoa from "@/components/Pessoa";
+import Info from "@/components/Info";
 export default {
   name: "LifeCycle",
-  data() {
-    return {
-      nome: 'Não sei',
+  components: {Info, Pessoa},
+  methods: {
+    lifeCycle() {
+
     }
-  },
-  created() {
-    setTimeout(() => {
-      this.nome = 'Ainda não sei'
-    }, 1000)
-  },
-  mounted() {
-    setTimeout(() => {
-      this.nome = 'Já disse que não sei'
-    }, 2000)
   }
 }
 </script>
