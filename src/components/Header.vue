@@ -2,26 +2,47 @@
   <div id="topbar">
     <Navbar/>
 
-    <div id="top-info" class="menu menu__top">
-      <div>
-        <label for="userAcesso">Username: </label>
+    <form action="" @submit="acessarConta($event)">
 
-        <input type="text" id="userAcesso" required="true"/>
+      <div id="top-info" class="menu menu__top">
+        <div>
+          <label>Username: </label>
+
+          <input type="text" :value="username" required="true"/>
+        </div>
+        <div>
+          <label>Senha: </label>
+          <input type="password" :value="password" required="true"/>
+        </div>
+        <SubmitInfo/>
       </div>
-      <div>
-        <label for="senhaAcesso">Senha: </label>
-        <input type="password" id="senhaAcesso" required="true"/>
-      </div>
-    </div>
+
+    </form>
+
   </div>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar";
+import SubmitInfo from "@/components/form/SubmitInfo";
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Header",
-  components: {Navbar}
+  components: {SubmitInfo, Navbar},
+  data() {
+    return {
+      username: '',
+      password: '',
+    }
+  },
+  methods: {
+    acessarConta(e) {
+      e.preventDefault();
+      console.log('Dados do usuário preenchido:');
+      console.log(this.username);
+      console.log(this.password);
+    }
+  }
 }
 </script>
 
