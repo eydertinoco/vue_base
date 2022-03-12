@@ -1,12 +1,10 @@
 <template>
-  <div class="navbar" id="navbar">
-    <a href="#home">Principal</a>
-    <a href="#news">Novidades</a>
-    <a href="#contact">Contato</a>
-    <a href="#about">Sobre</a>
-    <a href="javascript:void(0);" class="icon" @click="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
+  <div id="nav">
+    <router-link to="/">
+      <img src="" id="logo"/>
+    </router-link>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/pedidos">Pedidos</router-link>
   </div>
 </template>
 
