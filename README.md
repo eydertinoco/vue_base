@@ -6,8 +6,10 @@ npm install
 ```
 
 ## Install dependences
+
+### Sass-Loader
 ```
-sass-loader: npm install -D sass-loader sass
+npm install -D sass-loader sass
 ```
 
 ## Run Project
