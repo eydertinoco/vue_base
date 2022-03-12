@@ -1,13 +1,15 @@
-# helloworld
+# make_your_burger
+
+Esse é um projeto feito por Matheus Battisti do Curso de Vue 3 disponibilizado no Youtube ( https://www.youtube.com/playlist?list=PLnDvRpP8BnezDglaAvtWgQXzsOmXUuRHL ). Possui uma ótima didatica.
 
 ## Project setup
 ```
 npm install
 ```
 
-## Install sass-loader
+## Install dependences
 ```
-npm install -D sass-loader sass
+sass-loader: npm install -D sass-loader sass
 ```
 
 ### Compiles and hot-reloads for development
