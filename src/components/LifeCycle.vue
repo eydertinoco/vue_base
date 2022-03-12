@@ -1,6 +1,6 @@
 <template>
   <Pessoa/>
-  <info/>
+  <Info :email="email" :esta_trabalhando="esta_trabalhando"/>
 </template>
 
 <script>
@@ -9,6 +9,12 @@ import Info from "@/components/Info";
 export default {
   name: "LifeCycle",
   components: {Info, Pessoa},
+  data() {
+    return {
+      email: 'Joao@email.com',
+      esta_trabalhando: true,
+    }
+  },
   methods: {
     lifeCycle() {
 

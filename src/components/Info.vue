@@ -29,10 +29,14 @@
     // eslint-disable-next-line vue/multi-word-component-names
     name: "Info",
     components: {Picture},
+    props: {
+      email: String,
+      esta_trabalhando: Boolean,
+    },
     data() {
       return {
-        esta_trabalhando: true,
-        email: 'eydertinoco@outlook.com',
+        // esta_trabalhando: true,
+        // email: 'eydertinoco@outlook.com',
         mostrar_email: false,
         textobotao: 'Mostrar Email',
         meu_link: 'https://www.google.com.br/',

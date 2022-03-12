@@ -8,11 +8,11 @@
         <div>
           <label>Username: </label>
 
-          <input type="text" :value="username" required="true"/>
+          <input type="text" v-model="username" required="true"/>
         </div>
         <div>
           <label>Senha: </label>
-          <input type="password" :value="password" required="true"/>
+          <input type="password" v-model="password" required="true"/>
         </div>
         <SubmitInfo/>
       </div>
@@ -39,8 +39,16 @@ export default {
     acessarConta(e) {
       e.preventDefault();
       console.log('Dados do usuário preenchido:');
-      console.log(this.username);
-      console.log(this.password);
+
+      const username = this.username;
+      const password = this.password;
+
+      console.log(username);
+      console.log(password);
+
+      //ajax
+
+      //banco de dados
     }
   }
 }
