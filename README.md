@@ -5,10 +5,12 @@
 npm install
 ```
 
-## Install sass-loader
+## Install dependences
 ```
-npm install -D sass-loader sass
+sass-loader: npm install -D sass-loader sass
 ```
+
+## Run Project
 
 ### Compiles and hot-reloads for development
 ```
