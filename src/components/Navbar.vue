@@ -1,9 +1,9 @@
 <template>
   <div id="nav">
-    <router-link to="/">
-      <img src="" id="logo"/>
+    <router-link to="/" class="logoUrl">
+      <img :src="src" :alt="alt" id="logo"/>
     </router-link>
-    <router-link to="/">Home</router-link> |
+    <router-link to="/">Home</router-link>
     <router-link to="/pedidos">Pedidos</router-link>
   </div>
 </template>
@@ -12,6 +12,7 @@
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Navbar",
+  props: ['src', 'alt'],
   data() {
     return {
 
@@ -31,64 +32,31 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import './../assets/style/mixins';
+  @import './../assets/style/mixins';
 
-.navbar {
-  background-color: $laranja;
-  overflow: hidden;
-  /* Style the links inside the navigation bar */
-  & a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    &:hover {
-      background-color: #cc8925;
-      color: #14477c;
-      font-weight: 700;
-    }
-    &:active {
-      background-color: #cc8925;
-      color: #0479c3;
-      font-weight: 900;
-    }
-    &:not(:first-child) {
-      @include for-phone-only() {
-        display: none;
+  #nav {
+    background: #222;
+    border-bottom: 4px solid #111;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    & .logoUrl {
+      margin: auto;
+      margin-left: 0;
+      & #logo {
+        height: 40px;
+        width: 40px;
       }
-    }
-    &.icon {
-      @include for-phone-only() {
-        float: right;
-        display: block;
-      }
-    }
-  }
-  /* Hide the link that should open and close the topnav on small screens */
-  & .icon {
-    display: none;
-  }
-  &.responsive {
-    @include for-phone-only() {
-      position: relative;
     }
     & a {
-      @include for-phone-only() {
-        float: none;
-        display: block;
-        text-align: left;
-      }
-      &.icon {
-        @include for-phone-only() {
-          position: absolute;
-          right: 0;
-          top: 0;
-        }
+      color: #FCBA03;
+      text-decoration: none;
+      margin: 12px;
+      transition: 0.5s;
+      &:hover {
+        color: #FFF;
       }
     }
   }
-}
 </style>

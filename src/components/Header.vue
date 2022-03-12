@@ -1,6 +1,6 @@
 <template>
   <div id="topbar">
-    <Navbar/>
+    <Navbar :src="logomarca" :alt="descricao"/>
   </div>
 </template>
 
@@ -12,6 +12,8 @@ export default {
   components: {Navbar},
   data() {
     return {
+      logomarca: '/img/logo.png',
+      descricao: 'Make your burger',
     }
   },
   methods: {
