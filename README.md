@@ -8,8 +8,15 @@ npm install
 ```
 
 ## Install dependences
+
+### Sass-loader
 ```
-sass-loader: npm install -D sass-loader sass
+npm install -D sass-loader sass
+```
+
+### Vue Router 4
+```
+npm install vue-router@4
 ```
 
 ## Run Project

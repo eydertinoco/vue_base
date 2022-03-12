@@ -1,24 +1,18 @@
 <template>
   <Header/>
   <img alt="Vue logo" src="./assets/logo.png">
-  <PrimeiroComponente/>
-  <LifeCycle/>
   <Footer/>
 </template>
 
 <script>
 import Header from './components/Header'
 import Footer from './components/Footer'
-import PrimeiroComponente from './components/PrimeiroComponente'
-import LifeCycle from "@/components/LifeCycle";
 
 export default {
   name: 'App',
   components: {
     Header,
     Footer,
-    PrimeiroComponente,
-    LifeCycle,
   }
 }
 </script>
