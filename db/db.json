@@ -89,6 +89,18 @@
       ],
       "status": "Finalizado",
       "id": 1
+    },
+    {
+      "nome": "eyder",
+      "pao": "Italiano Branco",
+      "carne": "Alcatra",
+      "opcionais": [
+        "Bacon",
+        "Cheddar",
+        "Salame"
+      ],
+      "status": "Em produção",
+      "id": 2
     }
   ]
 }
