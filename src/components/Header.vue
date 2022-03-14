@@ -1,34 +1,15 @@
 <template>
   <div id="topbar">
     <Navbar/>
-
-    <form action="" @submit="acessarConta($event)">
-
-      <div id="top-info" class="menu menu__top">
-        <div>
-          <label>Username: </label>
-
-          <input type="text" v-model="username" required="true"/>
-        </div>
-        <div>
-          <label>Senha: </label>
-          <input type="password" v-model="password" required="true"/>
-        </div>
-        <SubmitInfo/>
-      </div>
-
-    </form>
-
   </div>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar";
-import SubmitInfo from "@/components/form/SubmitInfo";
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Header",
-  components: {SubmitInfo, Navbar},
+  components: {Navbar},
   data() {
     return {
       username: '',

@@ -1,9 +1,12 @@
 <template>
   <div class="navbar" id="navbar">
-    <a href="#home">Principal</a>
-    <a href="#news">Novidades</a>
-    <a href="#contact">Contato</a>
-    <a href="#about">Sobre</a>
+    <router-link to="/" class="logoUrl">
+      <img :src="src" :alt="alt" id="logo"/>
+    </router-link>
+    <router-link to="/">Home</router-link>
+    <router-link to="/informacao">Informação</router-link>
+    <router-link to="/contato">Contato</router-link>
+    <router-link to="/login">Acesso Restrito</router-link>
     <a href="javascript:void(0);" class="icon" @click="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
@@ -36,7 +39,7 @@ export default {
 @import './../assets/style/mixins';
 
 .navbar {
-  background-color: $laranja;
+  background-color: $azulClaro;
   overflow: hidden;
   /* Style the links inside the navigation bar */
   & a {

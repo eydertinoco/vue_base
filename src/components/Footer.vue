@@ -40,7 +40,6 @@ export default {
   bottom: 0px;
   text-transform: uppercase;
   position: relative;
-  margin-top: 8px;
   width: 100%;
   @include for-phone-only() {
     height: 140px;
