@@ -3,22 +3,14 @@
     <div class="footer__info">
       <p class="footer__text footer__text__t1">Footer de Eyder</p>
       <p class="footer__text footer__text__t2">Nome da rua, Numero da rua - Bairro Cidade - Estado. CEP</p>
-      <div class="footer__redeSocial">
-        <a href=""
-           target="blank" class="footer__redeSocial__link">
-          <img src="/img/social/face_wb.png" alt="Facebook" class="redeSocial footer__redeSocial__icon"/>
+      <a class="footer__text footer__text__t2" href="http://www.freepik.com">Arte: Designed by stories / Freepik</a>
+      <div>
+        <a href="https://www.linkedin.com/in/eyder-tinoco-ferreira-neto-91337a155/" target="blank">
+          <fa :icon="['fab', 'linkedin']" class="footer__redeSocial__icon"/>
         </a>
-        <a href=""
-           target="blank" class="footer__redeSocial__link">
-          <img src="/img/social/inst_bw.png" alt="Instagram" class="redeSocial footer__redeSocial__icon"/>
-        </a>
-        <a href=""
-           target="blank" class="footer__redeSocial__link">
-          <img src="/img/social/twit_bw.png" alt="Twitter" class="redeSocial footer__redeSocial__icon"/>
-        </a>
-        <a href=""
-           target="blank" class="footer__redeSocial__link">
-          <img src="/img/social/what_bw.png" alt="Whatsapp" class="redeSocial footer__redeSocial__icon"/>
+        <a href="https://wa.me/5582999221574" target="blank"
+           class="footer__redeSocial__icon">
+          <fa :icon="['fab', 'whatsapp']" class="footer__redeSocial__icon"/>
         </a>
       </div>
     </div>
@@ -36,19 +28,19 @@ export default {
 @import './../assets/style/mixins';
 
 .footer {
-  background-color: #004a77;
+  background-color: $azulClaro;
   bottom: 0px;
   text-transform: uppercase;
   position: relative;
   width: 100%;
   @include for-phone-only() {
-    height: 140px;
+    height: 200px;
   }
   @include for-tablet-only() {
-    height: 100px;
+    height: 180px;
   }
   @include for-desktop-only() {
-    height: 90px;
+    height: 160px;
   }
   &__info {
     bottom: 0px;
@@ -116,25 +108,11 @@ export default {
       text-decoration: none;
     }
     &__icon {
-      @include for-phone-only() {
-        margin: 0 4px;
-        visibility: visible;
-      }
-      @include for-tablet-only() {
-        margin: 0 4px;
-        visibility: visible;
-      }
-      @include for-desktop-only() {
-        bottom: 0px;
-        position: absolute;
-        visibility: hidden;
-      }
+      width: 40px;
+      height: 40px;
+      color: $branco;
     }
   }
 }
 
-.redeSocial {
-  margin-top: 12px!important;
-  width: 24px;
-}
 </style>

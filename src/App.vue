@@ -31,13 +31,13 @@ html, body {
 
 .body {
   @include for-phone-only() {
-    min-height: calc(100vh - 205px);
+    min-height: calc(100vh - 245px);
   }
   @include for-tablet-only() {
-    min-height: calc(100vh - 148px);
+    min-height: calc(100vh - 228px);
   }
   @include for-desktop-only() {
-    min-height: calc(100vh - 138px);;
+    min-height: calc(100vh - 208px);;
   }
 }
 

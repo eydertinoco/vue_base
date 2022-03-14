@@ -17,6 +17,36 @@ npm install
 npm install -D sass-loader sass
 ```
 
+### Fontawesome Icons
+#### Add SVG Core
+```
+npm i --save @fortawesome/fontawesome-svg-core
+```
+#### Add Icon Packages
+##### Free Icons Packages
+```
+npm i --save @fortawesome/free-solid-svg-icons
+```
+```
+npm i --save @fortawesome/free-regular-svg-icons
+```
+```
+npm i --save @fortawesome/free-brands-svg-icons
+```
+##### Pro Icon Packages
+```
+npm i --save @fortawesome/pro-solid-svg-icons
+npm i --save @fortawesome/pro-regular-svg-icons
+npm i --save @fortawesome/pro-light-svg-icons
+npm i --save @fortawesome/pro-thin-svg-icons
+npm i --save @fortawesome/pro-duotone-svg-icons
+```
+
+#### Add the Vue Component
+```
+npm i --save @fortawesome/vue-fontawesome@prerelease
+```
+
 ### Vue Router 4
 ```
 npm install vue-router@4
