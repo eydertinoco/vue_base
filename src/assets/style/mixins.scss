@@ -1,8 +1,9 @@
-$azulCinza: #698EBF;
-$azulClaro: #4178BF;
-$cinza: #868EA6;
-$branco: #D9C4B8;
-$preto: #0D0D0D;
+$laranja: #f49505;
+$azul: #467abb;
+$azulclaro: #5a90cc;
+$azulpiscina: #6bb3b2;
+$branco: #ffffff;
+$violeta: #322b80;
 $transparente: none;
 
 @mixin for-phone-only {
@@ -13,4 +14,42 @@ $transparente: none;
 }
 @mixin for-desktop-only {
   @media (min-width: 1025px) { @content; }
+}
+
+//@import "AmsiPro";
+
+html, body {
+  font-family: "AmsiPro", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "AmsiPro", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#map {
+  border-radius: 20px;
+  height: 600px;
+  margin: 3rem auto;
+  width: 95vw;
+  & h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  & h3 {
+    font-size: 16px;
+    margin: 0 0 10px;
+  }
+  & img {
+    height: auto;
+    width: 280px;
+  }
+  & p {
+    margin-top: 10px;
+  }
 }

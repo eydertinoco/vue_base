@@ -1,12 +1,9 @@
 <template>
-  <div class="navbar" id="navbar">
-    <router-link to="/" class="logoUrl">
-      <img :src="src" :alt="alt" id="logo"/>
-    </router-link>
-    <router-link to="/">Home</router-link>
-    <router-link to="/informacao">Informação</router-link>
-    <router-link to="/contato">Contato</router-link>
-    <router-link to="/login">Acesso Restrito</router-link>
+  <div class="nav" id="navbar">
+    <router-link url="#bloco1">Home</router-link>
+    <router-link url="#bloco1">Informação</router-link>
+    <router-link url="#bloco1">Contato</router-link>
+    <router-link url="#bloco1">Acesso Restrito</router-link>
     <a href="javascript:void(0);" class="icon" @click="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
@@ -38,62 +35,45 @@ export default {
 <style scoped lang="scss">
 @import './../assets/style/mixins';
 
-.navbar {
-  background-color: $azulClaro;
-  overflow: hidden;
-  /* Style the links inside the navigation bar */
-  & a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    &:hover {
-      background-color: #cc8925;
-      color: #14477c;
-      font-weight: 700;
-    }
-    &:active {
-      background-color: #cc8925;
-      color: #0479c3;
-      font-weight: 900;
-    }
-    &:not(:first-child) {
-      @include for-phone-only() {
-        display: none;
-      }
-    }
-    &.icon {
-      @include for-phone-only() {
-        float: right;
-        display: block;
-      }
+.nav {
+  position: fixed;
+  left: 0px;
+  top: 5%;
+  z-index: 1000;
+  & .ui-button.ui-button-icon-only {
+    background: #f39422;
+    height: 60px;
+    width: 60px;
+    & .ui-icon {
+      position: absolute;
+      top: calc(50% - 16px);
+      left: calc(50% - 18px);
+      font-size: 45px;
     }
   }
-  /* Hide the link that should open and close the topnav on small screens */
-  & .icon {
-    display: none;
-  }
-  &.responsive {
-    @include for-phone-only() {
-      position: relative;
-    }
-    & a {
-      @include for-phone-only() {
-        float: none;
-        display: block;
-        text-align: left;
-      }
-      &.icon {
-        @include for-phone-only() {
-          position: absolute;
-          right: 0;
-          top: 0;
-        }
-      }
-    }
+  div.nav-menu {
+    background-color: rgba(244, 244, 244, 0.933);
+    position: fixed;
+    z-index: 45;
+    top: 12rem;
+    left: calc(((100vw - 1367px) / 2) - 7px);
+    width: 5.5rem;
+    height: 5.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(67, 36, 17, 0.333) 0.2rem 0.2rem 0.4rem;
+    cursor: pointer;
+    opacity: 1;
+    border-radius: 0px 0.5rem 0.5rem 0px;
+    padding: 1.5rem 1rem;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    transition: width 0.3s ease 0s, opacity 0.5s ease 0s;
   }
 }
+
 </style>

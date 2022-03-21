@@ -1,15 +1,21 @@
 <template>
+  <div id="logotipo" class="header__logotipo">
+    <a href="http://www.maceio.al.gov.br" target="blank">
+      <img alt="Prefeitura de Maceió" src="../assets/img/logotipo/LogotipoComSlogan.svg"
+           class="header__logotipo__img"/>
+    </a>
+  </div>
   <div id="topbar">
-    <Navbar/>
+<!--    <Navbar/>-->
   </div>
 </template>
 
 <script>
-import Navbar from "@/components/Navbar";
+// import Navbar from "@/components/Navbar";
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Header",
-  components: {Navbar},
+  // components: {Navbar},
   data() {
     return {
       username: '',
@@ -38,99 +44,80 @@ export default {
 <style scoped lang="scss">
 @import './../assets/style/mixins';
 
-.menu {
-  position: relative;
-  &__text {
-    color: $branco;
-    font-size: 12px;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-    &:hover {
-      color: $branco;
+.header {
+  &__navbar {
+    background: $azul;
+    height: 75px;
+    z-index: 800;
+    & ul {
+      display: inline-block;
+      position: relative;
+      top: 12px;
+    }
+    & li {
+      display: inline;
+      margin: 0px 15px;
+    }
+    &__separador {
+      border-left: 2px solid white;
+      font-size: 24px;
+    }
+    &__text {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
       text-decoration: none;
+      text-transform: uppercase;
+      &:hover {
+        color: #f39422;
+      }
+      &:active {
+        color: #b16b18;
+      }
     }
   }
-  &__top {
-    background-color: #036BAC;
-    z-index: 200;
+
+  &__logotipo {
+    background: $branco;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 900;
     @include for-phone-only() {
-      height: 35px;
-      text-align: center;
-      top: -12px;
+      border-radius: 0px 0px 40px 40px;
+      display: flex;
+      justify-content: center;
+      height: 120px;
+      width: 100%;
     }
     @include for-tablet-only() {
-      height: 70px;
-      text-align: center;
-      top: -12px;
+      border-radius: 0px 0px 0px 150px;
+      height: 140px;
+      width: 450px;
     }
     @include for-desktop-only() {
-      border-radius: 0px 0px 0px 25px;
-      height: 120px;
-      right: 0px;
-      top: 0px;
-      position: absolute;
-      width: 400px;
+      border-radius: 0px 0px 0px 150px;
+      height: 140px;
+      width: 450px;
     }
-    &__title {
+    &__img {
       @include for-phone-only() {
         position: relative;
-        top: 10px;
-      }
-      @include for-tablet-only() {
-        position: relative;
-        top: 16px;
-      }
-      @include for-desktop-only() {
-        left: 150px;
-        top: 15px;
-        position: absolute;
-      }
-    }
-    &__submenu {
-      position: absolute;
-      top: 15px;
-      display: inline-flex;
-      @include for-phone-only() {
-        visibility: hidden;
-        width: 100%;
-        left: 0px;
-      }
-      @include for-tablet-only() {
-        position: relative;
-        top: 0px;
-      }
-      @include for-desktop-only() {
-        left: 45%;
-      }
-      &__options {
-        margin: 0px 20px 0px 0px;
-        display: inline-block;
-      }
-    }
-    &__redeSocial {
-      @include for-phone-only() {
-        position: absolute;
-        left: 0px;
-        visibility: hidden;
+        top: -10px;
+        right: 0;
+        width: 300px;
       }
       @include for-tablet-only() {
         position: absolute;
-        left: 0px;
-        visibility: hidden;
+        top: -20px;
+        right: 20px;
+        width: 360px;
       }
       @include for-desktop-only() {
-        right: 30px;
-        top: 20px;
         position: absolute;
-        visibility: visible;
-      }
-      &__link {
-        text-decoration: none;
-      }
-      &__img {
-        width: 40px;
-        margin: 0px 2px;
+        top: -20px;
+        right: 20px;
+        width: 360px;
       }
     }
   }
