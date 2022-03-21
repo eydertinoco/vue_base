@@ -1,8 +1,5 @@
 <template>
   <div class="navbar" id="navbar">
-    <router-link to="/" class="logoUrl">
-      <img :src="src" :alt="alt" id="logo"/>
-    </router-link>
     <router-link to="/">Home</router-link>
     <router-link to="/informacao">Informação</router-link>
     <router-link to="/contato">Contato</router-link>

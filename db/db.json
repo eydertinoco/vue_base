@@ -101,5 +101,122 @@
       "status": "Solicitado",
       "id": 4
     }
+  ],
+  "menu": [
+    {
+      "id": 1,
+      "nome": "Home",
+      "page": "/"
+    },
+    {
+      "id": 2,
+      "nome": "Informação",
+      "page": "/informacao"
+    },
+    {
+      "id": 3,
+      "nome": "Contato",
+      "page": "/contato"
+    },
+    {
+      "id": 4,
+      "nome": "Acesso Restrito",
+      "page": "/login"
+    }
+  ],
+  "linguagens": [
+    {
+      "id": 1,
+      "nome": "HTML",
+      "img": "/img/linguagens/html.png"
+    },
+    {
+      "id": 2,
+      "nome": "CSS",
+      "img": "/img/linguagens/css.png"
+    },
+    {
+      "id": 3,
+      "nome": "JavaScript",
+      "img": "/img/linguagens/JS.png"
+    },
+    {
+      "id": 4,
+      "nome": "Java",
+      "img": "/img/linguagens/java.png"
+    }
+  ],
+  "frameworks": [
+    {
+      "id": 1,
+      "nome": "Vue.js",
+      "img": "/img/framework/vue.png"
+    },
+    {
+      "id": 2,
+      "nome": "Angular.js",
+      "img": "/img/framework/angular.png"
+    },
+    {
+      "id": 3,
+      "nome": "Sass",
+      "img": "/img/framework/sass.png"
+    }
+  ],
+  "library": [
+    {
+      "id": 1,
+      "nome": "Prime",
+      "img": "/img/library/prime_logo.png"
+    },
+    {
+      "id": 2,
+      "nome": "Bootstrap",
+      "img": "/img/library/bootstrap.png"
+    }
+  ],
+  "experiencia": [
+    {
+      "id": 1,
+      "nome": "Desenvolvedor Web",
+      "cargo": "Estágiario",
+      "empresa": "Secretária Municipal de Gestão de Maceió",
+      "coordenada": "",
+      "entrada": "dez de 2020",
+      "saida": "",
+      "atual": true
+    },
+    {
+      "id": 2,
+      "nome": "Desenvolvedor Web",
+      "cargo": "Bolsista",
+      "empresa": "Instituto Federal de Educação, Ciência e Tecnologia de Alagoas",
+      "coordenada": "",
+      "entrada": "set de 2021",
+      "saida": "fev de 2022",
+      "atual": false
+    }
+  ],
+  "academica": [
+    {
+      "id": 1,
+      "curso": "Engenharia Civil",
+      "modelo": "Bacharelado",
+      "empresa": "Cesmac",
+      "coordenada": "",
+      "entrada": "2012",
+      "saida": "2017",
+      "atual": false
+    },
+    {
+      "id": 2,
+      "curso": "Sistemas de Informação",
+      "modelo": "Bacharelado",
+      "empresa": "Instituto Federal de Educação, Ciência e Tecnologia de Alagoas - IFAL",
+      "coordenada": "",
+      "entrada": "2019",
+      "saida": "2024",
+      "atual": true
+    }
   ]
 }

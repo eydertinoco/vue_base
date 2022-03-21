@@ -1,19 +1,26 @@
 <template>
   <div align="center" class="footer">
     <div class="footer__info">
-      <p class="footer__text footer__text__t1">Footer de Eyder</p>
-      <p class="footer__text footer__text__t2">Nome da rua, Numero da rua - Bairro Cidade - Estado. CEP</p>
-      <a class="footer__text footer__text__t2" href="http://www.freepik.com">Arte: Designed by stories / Freepik</a>
+      <a class="info info__t2" href="http://www.freepik.com">Arte: Designed by stories / Freepik</a>
+    </div>
+    <div class="footer__info">
+      <p>Redes Sociais</p>
       <div>
         <a href="https://www.linkedin.com/in/eyder-tinoco-ferreira-neto-91337a155/" target="blank">
-          <fa :icon="['fab', 'linkedin']" class="footer__redeSocial__icon"/>
+          <FontAwesome :icon="['fab', 'linkedin']" class="redeSocial__icon"/>
         </a>
         <a href="https://wa.me/5582999221574" target="blank"
            class="footer__redeSocial__icon">
-          <fa :icon="['fab', 'whatsapp']" class="footer__redeSocial__icon"/>
+          <FontAwesome :icon="['fab', 'whatsapp']" class="redeSocial__icon"/>
         </a>
       </div>
     </div>
+  </div>
+  <div class="copyright">
+    <button class="btnTop">
+      <FontAwesome icon="fa-arrow-up" />
+    </button>
+    <p>© 2022, Eyder Tinoco</p>
   </div>
 </template>
 
@@ -32,20 +39,13 @@ export default {
   bottom: 0px;
   text-transform: uppercase;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 200px;
   width: 100%;
-  @include for-phone-only() {
-    height: 200px;
-  }
-  @include for-tablet-only() {
-    height: 180px;
-  }
-  @include for-desktop-only() {
-    height: 160px;
-  }
   &__info {
-    bottom: 0px;
-    left: 0px;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     @include for-phone-only() {
       height: 140px;
@@ -53,65 +53,49 @@ export default {
     @include for-tablet-only() {
       height: 100px;
     }
-  }
-  &__text {
-    color: $branco;
-    font-size: 12px !important;
-    font-family: "Montserrat",Helvetica,Arial,sans-serif !important;
-    margin: 5px 0;
-    @include for-phone-only() {
-      position: absolute;
-    }
-    @include for-tablet-only() {
-      position: absolute;
-    }
-    @include for-desktop-only() {
-      height: 20px;
-      position: relative;
-    }
-    &__t1 {
-      font-weight: bold;
-      @include for-phone-only() {
-        right: calc(50% - 80px);
-        top: 10px;
-      }
-      @include for-tablet-only() {
-        right: calc(50% + 120px);
-        top: 10px;
-      }
-    }
-    &__t2 {
-      @include for-phone-only() {
-        left: calc(50% - 185px);
-        top: 40px;
-      }
-      @include for-tablet-only() {
-        left: calc(50% - 100px);
-        top: 10px;
-      }
-    }
-  }
-  &__redeSocial {
-    @include for-phone-only() {
-      top: 100px;
-      position: relative;
-    }
-    @include for-tablet-only() {
-      top: 60px;
-      position: relative;
-    }
-    @include for-desktop-only() {
-      bottom: 0px;
-      position: absolute;
-    }
-    &__link {
-      text-decoration: none;
-    }
-    &__icon {
-      width: 40px;
-      height: 40px;
+    & .info {
       color: $branco;
+      margin: 5px 0;
+      &__t1 {
+        font-weight: bold;
+      }
+      &__t2 {
+      }
     }
+    & .redeSocial {
+      &__link {
+        text-decoration: none;
+      }
+      &__icon {
+        color: $branco;
+        margin: 0 5px;
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
+}
+
+.copyright {
+  background: $preto;
+  color: $branco;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  font-size: 14px;
+  & .btnTop {
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    border: 3px solid $preto;
+    background: $cinza;
+    color: $preto;
+    position: absolute;
+    bottom: 45px;
+    right: 10px;
+    z-index: 900;
   }
 }
 
